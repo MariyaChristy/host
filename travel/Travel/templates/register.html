@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+        body{
+            text-align: center;
+
+            margin-top: 50px;
+            color:blue;background-color:aqua;
+
+        }
+        input{
+            padding: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<form action="register" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username"><br>
+
+    <br><input type="text" name="first_name" placeholder="Enter your firstname"><br>
+    <br> <input type="text" name="last_name" placeholder="Enter your lastname"><br>
+    <br><input type="email" name="Email" placeholder="enter email"><br>
+    <br><input type="password" name="Password" placeholder="Enter password"><br>
+    <br><input type="password" name="password" placeholder="Confirm your Password"><br>
+    <br><input type="submit">
+
+{% for msg in messages %}
+<h2>{{m}}</h2>
+{% endfor %}
+
+
+</form>
+
+
+</body>
+</html>
